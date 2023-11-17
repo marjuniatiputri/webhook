@@ -2,7 +2,7 @@ package gcf
 
 import (
 	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
-	"github.com/jxxzy/webhook"
+	"github.com/marjuniatiputri/webhook"
 )
 
 func init() {

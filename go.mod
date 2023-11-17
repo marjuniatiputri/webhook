@@ -1,4 +1,4 @@
-module github.com/jxxzy/webhook
+module github.com/marjuniatiputri/webhook
 
 go 1.20
 
