@@ -18,7 +18,7 @@ func PostBalasan(w http.ResponseWriter, r *http.Request) {
 	var msg model.IteungMessage
 	var resp atmessage.Response
 	json.NewDecoder(r.Body).Decode(&msg)
-	link := "https://medium.com/@greensento/tutorial-menggunakan-whatsauth-731796d56033"
+	link := "https://medium.com/@marjuniatiputri/cara-praktis-membuat-whatsauth-api-danwhatsapp-notifshare-location-89f35c144610"
 	if r.Header.Get("Secret") == os.Getenv("SECRET") {
 		if msg.Message == "loc" || msg.Message == "Loc" || msg.Message == "lokasi" || msg.LiveLoc {
 			location, err := ReverseGeocode(msg.Latitude, msg.Longitude)
@@ -55,7 +55,7 @@ func PostBalasan(w http.ResponseWriter, r *http.Request) {
 
 		} else {
 			randm := []string{
-				"Hai Hai Haiii kamuuuui " + msg.Alias_name + "\nJosuanya lagi gaadaa \n aku Tejobott salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
+				"Hai Hai Haiii kamuuuui " + msg.Alias_name + "\nNiaanya lagi gaadaa \n aku botnia salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
 				"IHHH jangan SPAAM berisik tau giseu lagi tidur",
 				"Kamu ganteng tau",
 				"Ihhh kamu cantik banget",
