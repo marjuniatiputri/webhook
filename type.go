@@ -5,11 +5,9 @@ type Reply struct {
 }
 
 var stringreply = []string{
-	"IHHH jangan SPAAM berisik tau giseu lagi tidur",
+	"IHHH jangan SPAAM berisik tau aku lagi dijalan nih",
 	"Kamu ganteng tau",
 	"Ihhh kamu cantik banget",
-	"bro, mending beliin aku nasgor",
-	"Jangan galak galak dong kak, aku takut tauu",
-	"Mawar Indah hanya akan muncul dipagi hari, MAKANYA BANGUN PAGI KAK",
-	"Cihuyyyy hari ini giseuu bahagiaaa banget",
+	"Senja memang indah tapi kamu tetap yang terindah Aseek",
+	"Anyong Aseoo Yeoboo, Aiigoo Haris lagi gaadaa",
 }

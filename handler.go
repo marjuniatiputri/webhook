@@ -18,7 +18,7 @@ func PostBalasan(w http.ResponseWriter, r *http.Request) {
 	var msg model.IteungMessage
 	var resp atmessage.Response
 	json.NewDecoder(r.Body).Decode(&msg)
-	link := "https://medium.com/@marjuniatiputri/cara-praktis-membuat-whatsauth-api-danwhatsapp-notifshare-location-89f35c144610"
+	link := "https://medium.com/@imyharis/cara-menggunakan-whatsauth-free-2fa-otp-notif-whatsapp-gateway-api-gratis-3e89dea56a21"
 	if r.Header.Get("Secret") == os.Getenv("SECRET") {
 		if msg.Message == "loc" || msg.Message == "Loc" || msg.Message == "lokasi" || msg.LiveLoc {
 			location, err := ReverseGeocode(msg.Latitude, msg.Longitude)
@@ -27,7 +27,7 @@ func PostBalasan(w http.ResponseWriter, r *http.Request) {
 				location = "Unknown Location"
 			}
 
-			reply := fmt.Sprintf("Hai hai haiii kamu pasti lagi di %s \n Koordinatenya : %s - %s\n Cara Penggunaan WhatsAuth Ada di link dibawah ini"+link+
+			reply := fmt.Sprintf("Anyong Aseoo kamu pasti lagi di %s \n Koordinatenya : %s - %s\n Cara Penggunaan WhatsAuth Ada di link dibawah ini"+
 				"yaa kak %s\n", location,
 				strconv.Itoa(int(msg.Longitude)), strconv.Itoa(int(msg.Latitude)), link)
 			dt := &wa.TextMessage{
@@ -55,18 +55,11 @@ func PostBalasan(w http.ResponseWriter, r *http.Request) {
 
 		} else {
 			randm := []string{
-				"Hai Hai Haiii kamuuuui " + msg.Alias_name + "\nNiaanya lagi gaadaa \n aku botnia salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
-				"IHHH jangan SPAAM berisik tau giseu lagi tidur",
-				"Kamu ganteng tau",
+				"Anyong Aseoo Yeoboo " + msg.Alias_name + "\n Haris lagi gaadaa \n aku Gwencahana Bot salam kenall yaaaa, Sarangheo <3 \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
+				"ihh jangan SPAM DOng berisik tau aku lagi dijalan nih",
+				"Gwencahanaa yoo",
 				"Ihhh kamu cantik banget",
-				"bro, mending beliin aku nasgor",
-				"Jangan galak galak dong kak, aku takut tauu",
-				"Mawar Indah hanya akan muncul dipagi hari, MAKANYA BANGUN PAGI KAK",
-				"Cihuyyyy hari ini giseuu bahagiaaa banget",
-				"Bercandyaaa berrcandyaaaa",
-				"apaansih",
-				"gwenchanayooo",
-				"emang boleh",
+				"Senja memang indah tapi kamu tetap yang terindah Aseek",
 			}
 			dt := &wa.TextMessage{
 				To:       msg.Phone_number,
@@ -120,7 +113,7 @@ func Liveloc(w http.ResponseWriter, r *http.Request) {
 		location = "Unknown Location"
 	}
 
-	reply := fmt.Sprintf("Hai hai haiii kamu pasti lagi di %s \n Koordinatenya : %s - %s\n", location,
+	reply := fmt.Sprintf("Anyong Aseoo kamu pasti lagi di %s \n Koordinatenya : %s - %s\n", location,
 		strconv.Itoa(int(msg.Longitude)), strconv.Itoa(int(msg.Latitude)))
 
 	if r.Header.Get("Secret") == os.Getenv("SECRET") {
